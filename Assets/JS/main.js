@@ -3,7 +3,6 @@ $(window).on("load", formSite(data));
 
 function formSite(data) {
 	data.sort((a, b) => {
-		console.log(data);
 		return a.title > b.title ? 1 : -1;
 	});
 	for (var i = 0; i < data.length; i++) {
