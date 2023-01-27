@@ -1,0 +1,326 @@
+html {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  background: #121212;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.0509803922);
+}
+header h1 {
+  color: #ffffff;
+  font-size: 3rem;
+}
+
+main .light-novels {
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+main .light-novels .light-novel .header {
+  display: flex;
+  flex-direction: row;
+}
+main .light-novels .light-novel .header .tag {
+  font-size: 2rem;
+  color: #ffffff;
+  background: #698fd0;
+  padding: 0px 5px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+main .light-novels .light-novel .header .title {
+  font-size: 2rem;
+  color: #ffffff;
+}
+main .light-novels .light-novel .header .status {
+  font-size: 1rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 3px;
+  border-radius: 3px;
+  align-self: center;
+  margin-left: 10px;
+  color: #ffffff;
+}
+main .light-novels .light-novel .header .status.planning {
+  background: #233ef0;
+}
+main .light-novels .light-novel .header .status.reading {
+  background: #02a9ff;
+}
+main .light-novels .light-novel .header .status.paused {
+  background: #9256f3;
+}
+main .light-novels .light-novel .header .status.completed {
+  background: #68d639;
+}
+main .light-novels .light-novel .header .status.dropped {
+  background: #f779a4;
+}
+main .light-novels .light-novel .content {
+  background: rgba(255, 255, 255, 0.1411764706);
+  margin-top: 10px;
+  border-radius: 5px;
+  padding: 15px;
+  max-width: 1800px;
+  width: 1800px;
+  display: grid;
+  grid-template-columns: 0.8fr 4fr;
+  gap: 10px;
+  overflow: hidden;
+}
+main .light-novels .light-novel .content > * {
+  overflow: auto;
+}
+main .light-novels .light-novel .content .index {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  gap: 5px;
+}
+main .light-novels .light-novel .content .index .value {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1607843137);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+main .light-novels .light-novel .content .index .value .color {
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  margin-right: 5px;
+  border: 2px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+main .light-novels .light-novel .content .index .value .color.owned {
+  background: rgba(10, 255, 6, 0.6352941176);
+}
+main .light-novels .light-novel .content .index .value .color.read {
+  background: #2f47d0;
+}
+main .light-novels .light-novel .content .index .value .color.not-translated {
+  background: none;
+}
+main .light-novels .light-novel .content .index .value .color.not-owned {
+  background: #d62b2b;
+}
+main .light-novels .light-novel .content .index .value .meaning {
+  color: #ffffff;
+}
+main .light-novels .light-novel .content .progress {
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 2px solid #ffffff;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 5px;
+}
+main .light-novels .light-novel .content .progress .volume {
+  min-width: 65px;
+}
+main .light-novels .light-novel .content .progress .volume .number {
+  height: 60px;
+  border-bottom: 2px solid #ffffff;
+  border-right: 2px solid #ffffff;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+  align-self: center;
+}
+main .light-novels .light-novel .content .progress .volume .number.owned {
+  background: rgba(10, 255, 6, 0.6352941176);
+}
+main .light-novels .light-novel .content .progress .volume .number.no-translation {
+  background: rgba(255, 255, 255, 0.1607843137);
+}
+main .light-novels .light-novel .content .progress .volume .number.not-owned {
+  background: #d62b2b;
+}
+main .light-novels .light-novel .content .progress .volume .completion {
+  min-height: 60px;
+  height: 100%;
+  border-right: 2px solid #ffffff;
+  font-size: 1.5rem;
+  color: #ffffff;
+  text-align: center;
+  align-self: center;
+}
+main .light-novels .light-novel .content .progress .volume .completion.completed {
+  background: #2f47d0;
+}
+main .light-novels .light-novel .content .progress .volume:last-child .number,
+main .light-novels .light-novel .content .progress .volume:last-child .completion {
+  border-right: 0;
+}
+main .light-novels .light-novel .content .image {
+  border-radius: 5px;
+  margin-left: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  grid-row: 1/5;
+}
+main .light-novels .light-novel .content .image img {
+  height: 100%;
+  width: 300px;
+}
+main .light-novels .light-novel .content .extra {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background: rgba(255, 255, 255, 0.1411764706);
+  border-radius: 5px;
+  color: #ffffff;
+  text-align: center;
+}
+main .light-novels .light-novel .content .extra .stat {
+  width: 100%;
+}
+main .light-novels .light-novel .content .extra .stat .value {
+  background: rgba(255, 255, 255, 0.1411764706);
+  align-self: center;
+  padding: 5px 0px;
+}
+main .light-novels .light-novel .content .extra .stat:first-child .value {
+  align-self: center;
+  display: flex;
+  justify-content: center;
+}
+main .light-novels .light-novel .content .extra .stat:first-child .value h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0px 5px;
+  border-radius: 5px;
+}
+main .light-novels .light-novel .content .extra .stat:first-child .value h2.finished {
+  background: #53d528;
+}
+main .light-novels .light-novel .content .extra .stat:first-child .value h2.ongoing {
+  background: #fbce3b;
+}
+main .light-novels .light-novel .content .extra .stat:first-child .value h2.hiatus {
+  background: #e23e3e;
+}
+main .light-novels .light-novel .content .more-details {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 10px;
+  top: 0;
+}
+main .light-novels .light-novel .content .more-details .detail {
+  background: rgba(255, 255, 255, 0.1411764706);
+  height: 160px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+main .light-novels .light-novel .content .more-details .detail .title {
+  font-size: 3rem;
+  color: #ffffff;
+  align-self: center;
+}
+main .light-novels .light-novel .content .more-details .detail .count {
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+  align-self: center;
+  color: #ffffff;
+  background: #02a9ff;
+  padding: 5px;
+  border-radius: 5px;
+  line-height: 1;
+}
+main .light-novels .light-novel .content .more-details .detail .dates {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #ffffff;
+  width: 100%;
+}
+main .light-novels .light-novel .content .more-details .detail .dates .release {
+  display: flex;
+  flex-direction: row;
+}
+main .light-novels .light-novel .content .more-details .detail .dates .release .date {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  align-self: center;
+  color: #ffffff;
+  background: #02a9ff;
+  padding: 5px;
+  border-radius: 5px;
+}
+main .light-novels .light-novel:last-child {
+  padding-bottom: 30px;
+}/*# sourceMappingURL=main.css.map */

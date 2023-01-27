@@ -1,0 +1,276 @@
+header {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 25vh;
+	width: 100vw;
+	background: $background_01dp;
+	h1 {
+		color: $white;
+		font-size: 3rem;
+	}
+}
+
+main {
+	.light-novels {
+		display: flex;
+		gap: 30px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin-top: 30px;
+		.light-novel {
+			.header {
+				display: flex;
+				flex-direction: row;
+				.tag {
+					font-size: 2rem;
+					color: $white;
+					background: $tag;
+					padding: 0px 5px;
+					border-radius: 5px;
+					margin-right: 10px;
+				}
+				.title {
+					font-size: 2rem;
+					color: $white;
+				}
+				.status {
+					font-size: 1rem;
+					height: fit-content;
+					padding: 3px;
+					border-radius: 3px;
+					align-self: center;
+					margin-left: 10px;
+					color: $white;
+					&.planning {
+						background: $planning;
+					}
+					&.reading {
+						background: $reading;
+					}
+					&.paused {
+						background: $paused;
+					}
+					&.completed {
+						background: $completed;
+					}
+					&.dropped {
+						background: $dropped;
+					}
+				}
+			}
+			.content {
+				background: $background_12dp;
+				margin-top: 10px;
+				border-radius: 5px;
+				padding: 15px;
+				max-width: 1800px;
+				width: 1800px;
+				//Grid
+				display: grid;
+				grid-template-columns: 0.8fr 4fr;
+				gap: 10px;
+				overflow: hidden;
+				> * {
+					overflow: auto;
+				}
+				.index {
+					display: flex;
+					flex-direction: row;
+					justify-content: end;
+					gap: 5px;
+					.value {
+						display: flex;
+						flex-direction: row;
+						align-items: center;
+						background: $background_24dp;
+						padding: 5px 10px;
+						border-radius: 5px;
+						.color {
+							height: 20px;
+							width: 20px;
+							border-radius: 3px;
+							margin-right: 5px;
+							border: 2px solid $white;
+							display: flex;
+							justify-content: center;
+							align-items: center;
+							color: $white;
+							&.owned {
+								background: $owned;
+							}
+							&.read {
+								background: $read;
+							}
+							&.not-translated {
+								background: none;
+							}
+							&.not-owned {
+								background: $not-owned;
+							}
+						}
+						.meaning {
+							color: $white;
+						}
+					}
+				}
+				.progress {
+					display: flex;
+					flex-direction: row;
+					overflow: hidden;
+					flex-shrink: 0;
+					border: 2px solid $white;
+					width: fit-content;
+					border-radius: 5px;
+					.volume {
+						min-width: 65px;
+						.number {
+							height: 60px;
+							border-bottom: 2px solid $white;
+							border-right: 2px solid $white;
+							font-size: 1.5rem;
+							color: $white;
+							text-align: center;
+							align-self: center;
+							&.owned {
+								background: $owned;
+							}
+							&.no-translation {
+								background: $background_24dp;
+							}
+							&.not-owned {
+								background: $not-owned;
+							}
+						}
+						.completion {
+							min-height: 60px;
+							height: 100%;
+							border-right: 2px solid $white;
+							font-size: 1.5rem;
+							color: $white;
+							text-align: center;
+							align-self: center;
+							&.completed {
+								background: $read;
+							}
+						}
+						&:last-child {
+							.number,
+							.completion {
+								border-right: 0;
+							}
+						}
+					}
+				}
+				.image {
+					border-radius: 5px;
+					margin-left: 10px;
+					border-radius: 10px;
+					overflow: hidden;
+					grid-row: 1 / 5;
+					img {
+						height: 100%;
+						width: 300px;
+					}
+				}
+				.extra {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-evenly;
+					background: $background_12dp;
+					border-radius: 5px;
+					color: $white;
+					text-align: center;
+					.stat {
+						width: 100%;
+						.value {
+							background: $background_12dp;
+							align-self: center;
+							padding: 5px 0px;
+						}
+						&:first-child {
+							.value {
+								align-self: center;
+								display: flex;
+								justify-content: center;
+								h2 {
+									width: fit-content;
+									padding: 0px 5px;
+									border-radius: 5px;
+									&.finished {
+										background: $finished;
+									}
+									&.ongoing {
+										background: $ongoing;
+									}
+									&.hiatus {
+										background: $hiatus;
+									}
+								}
+							}
+						}
+					}
+				}
+				.more-details {
+					display: grid;
+					grid-template-columns: 1fr 2fr;
+					gap: 10px;
+					top: 0;
+					.detail {
+						background: $background_12dp;
+						height: 160px;
+						border-radius: 5px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						flex-direction: column;
+						gap: 10px;
+						.title {
+							font-size: 3rem;
+							color: $white;
+							align-self: center;
+						}
+						.count {
+							font-size: 3rem;
+							font-weight: 600;
+							text-align: center;
+							align-self: center;
+							color: $white;
+							background: $reading;
+							padding: 5px;
+							border-radius: 5px;
+							line-height: 1;
+						}
+						.dates {
+							display: flex;
+							flex-direction: row;
+							justify-content: space-evenly;
+							font-size: 3rem;
+							font-weight: 600;
+							color: $white;
+							width: 100%;
+							.release {
+								display: flex;
+								flex-direction: row;
+								.date {
+									font-size: 2rem;
+									font-weight: 600;
+									text-align: center;
+									align-self: center;
+									color: $white;
+									background: $reading;
+									padding: 5px;
+									border-radius: 5px;
+								}
+							}
+						}
+					}
+				}
+			}
+			&:last-child {
+				padding-bottom: 30px;
+			}
+		}
+	}
+}
